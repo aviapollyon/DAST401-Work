@@ -1,9 +1,6 @@
 def create_list(x,y):
-    # =  y
-    result = list(range(y+1))
+    result = []
     print(result)
-    for i in range(y):
-        result[i] = x * (x)
+    for i in range(y +1):
+        result.append(x ** i)
     return result
-
-print(create_list(2,8))

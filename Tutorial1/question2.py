@@ -3,4 +3,3 @@ def sum_squares(x):
     for i in range(x+1):
         sum += i*i
     return sum
-
