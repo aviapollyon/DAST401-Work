@@ -1,10 +1,11 @@
 def distinct(data):
-    for i in range(len(data)):
-        for j in range(i + 1, len(data)):
-            if data[i] == data[j]:
-                return False
-    return True
+    if isinstance(data, str):
+        data = data.lower()
+    else:
+        data = [str(item).lower() for item in data]
+    
+    return len(data) == len(set(data))
 
 print(distinct("Avinasha"))  # False - has duplicate 'a'
-print(distinct("abc"))       # True - all letters are different
+print(distinct(["a", "b", "c"]))       # True - all letters are different
 print(distinct("hello"))     # False - has duplicate 'l'
